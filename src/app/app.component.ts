@@ -1,9 +1,11 @@
+import { Cards } from './../pages/cards/cards';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { Buttons } from './../pages/buttons/buttons';
 @Component({
   templateUrl: 'app.html'
 })
@@ -13,7 +15,9 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     this.pages = [
-      {title: 'Home Page', component: HomePage}
+      {title: 'Home Page', component: HomePage},
+      {title: 'Buttons', component: Buttons},
+      {title: 'Cards', component: Cards}
     ];
 
     platform.ready().then(() => {

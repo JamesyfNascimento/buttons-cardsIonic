@@ -1,3 +1,5 @@
+import { Cards } from './../pages/cards/cards';
+import { Buttons } from './../pages/buttons/buttons';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -12,7 +14,9 @@ import { Header } from '../components/header/header';
   declarations: [
     MyApp,
     HomePage,
-    Header
+    Header,
+    Buttons,
+    Cards
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,9 @@ import { Header } from '../components/header/header';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    Buttons,
+    Cards
   ],
   providers: [
     StatusBar,
