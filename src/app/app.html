@@ -1,0 +1,18 @@
+<!-- primeiro menu, com todas as configurações -->
+<ion-menu [content] = "myContent" id="menu1" enabled="true" persistent="true" side="left" swipeEnabled="true" (ionOpen)="onOpen()" (ionClose)="onClose()" (ionDrag)="onDrag()">
+    <ion-header>
+        <ion-title>
+            Menu
+        </ion-title>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+            <button ion-item *ngFor = "let p of pages" (click)="openPage(p)" menuClose>
+                {{ p.title }}
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #myContent [root]="rootPage"></ion-nav>
